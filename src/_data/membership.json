@@ -1,0 +1,23 @@
+{
+  "tiers": [
+    {
+      "name": "Basic",
+      "monthly": 59,
+      "annualMonthly": 49,
+      "features": ["Unlimited climbing", "Gear rental discount 20%", "No contract on monthly"]
+    },
+    {
+      "name": "Standard",
+      "monthly": 89,
+      "annualMonthly": 74,
+      "features": ["Everything in Basic", "One guest pass / month", "Free gear rental", "10% off classes"],
+      "featured": true
+    },
+    {
+      "name": "Family (2 adults)",
+      "monthly": 149,
+      "annualMonthly": 124,
+      "features": ["Everything in Standard", "Up to 2 kids included", "2 guest passes / month"]
+    }
+  ]
+}

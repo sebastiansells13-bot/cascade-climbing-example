@@ -1,0 +1,10 @@
+{
+  "list": [
+    { "label": "V0–V1", "yds": "5.6–5.8", "fill": 20, "color": "#3fb8af" },
+    { "label": "V2–V3", "yds": "5.9–5.10a", "fill": 38, "color": "#3fb8af" },
+    { "label": "V4–V5", "yds": "5.10b–5.11a", "fill": 55, "color": "#ff5a1f" },
+    { "label": "V6–V7", "yds": "5.11b–5.12a", "fill": 72, "color": "#ff5a1f" },
+    { "label": "V8–V9", "yds": "5.12b–5.13a", "fill": 88, "color": "#e0342a" },
+    { "label": "V10+", "yds": "5.13b+", "fill": 100, "color": "#e0342a" }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "list": [
+    { "day": "Mon", "name": "Intro to Bouldering", "time": "6:00 PM", "level": "Beginner" },
+    { "day": "Mon", "name": "Lead Climbing Cert", "time": "7:30 PM", "level": "Intermediate" },
+    { "day": "Tue", "name": "Youth Team Practice", "time": "5:00 PM", "level": "Ages 8–14" },
+    { "day": "Wed", "name": "Intro to Bouldering", "time": "6:00 PM", "level": "Beginner" },
+    { "day": "Wed", "name": "Technique Clinic", "time": "7:30 PM", "level": "All levels" },
+    { "day": "Thu", "name": "Women's Climbing Night", "time": "6:30 PM", "level": "All levels" },
+    { "day": "Sat", "name": "Intro to Bouldering", "time": "10:00 AM", "level": "Beginner" },
+    { "day": "Sat", "name": "Family Climb", "time": "1:00 PM", "level": "All ages" }
+  ]
+}

@@ -1,0 +1,7 @@
+[
+  { "text": "Home", "url": "/" },
+  { "text": "Membership", "url": "/membership/" },
+  { "text": "Routes", "url": "/routes/" },
+  { "text": "Classes", "url": "/classes/" },
+  { "text": "Contact", "url": "/contact/" }
+]

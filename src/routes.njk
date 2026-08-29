@@ -1,0 +1,27 @@
+---
+layout: layouts/page.njk
+title: Routes
+permalink: /routes/
+---
+<section class="section">
+  <div class="wrapper">
+    <div class="section-heading">
+      <h1>Route Guide</h1>
+      <p>Bouldering (V-scale) to roped (YDS) grade conversion — rough, but useful for picking your first project.</p>
+    </div>
+    <div class="grade-chart" style="max-width:36rem; margin:0 auto;">
+      {% for g in grades.list %}
+      <div class="grade-row">
+        <span class="grade-row__label">{{ g.label }}</span>
+        <span class="grade-row__bar"><span class="grade-row__bar-fill" style="width:{{ g.fill }}%; background:{{ g.color }};"></span></span>
+        <span class="grade-row__yds">{{ g.yds }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="prose" style="text-align:center; margin-top:2.5rem; opacity:0.8;">
+      Routes are reset every two weeks. Color tape at the base of each route marks
+      its grade band — ask a staff member on the floor if you're not sure what
+      you're looking at.
+    </p>
+  </div>
+</section>

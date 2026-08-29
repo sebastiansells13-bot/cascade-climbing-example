@@ -1,0 +1,32 @@
+---
+layout: layouts/page.njk
+title: Classes
+permalink: /classes/
+---
+<section class="section">
+  <div class="wrapper">
+    <div class="section-heading">
+      <h1>Classes</h1>
+      <p>Filter by day — everything's included with a Standard or Family membership.</p>
+    </div>
+
+    <div class="day-filter" id="day-filter">
+      <button type="button" data-day="all" class="selected">All</button>
+      <button type="button" data-day="Mon">Mon</button>
+      <button type="button" data-day="Tue">Tue</button>
+      <button type="button" data-day="Wed">Wed</button>
+      <button type="button" data-day="Thu">Thu</button>
+      <button type="button" data-day="Sat">Sat</button>
+    </div>
+
+    <ul class="class-list" id="class-list">
+      {% for c in classes.list %}
+      <li class="class-row" data-day="{{ c.day }}">
+        <span class="class-row__day">{{ c.day }}</span>
+        <span>{{ c.name }}<br><span style="color:var(--muted); font-size:0.85rem;">{{ c.time }}</span></span>
+        <span class="class-row__level">{{ c.level }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,55 @@
+---
+layout: layouts/page.njk
+title: Home
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+<div class="hero">
+  <div class="wrapper">
+    <h1>{{ business.name }}</h1>
+    <p>{{ business.tagline }}</p>
+    <a href="/membership/" class="btn">See Membership</a>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrapper">
+    <div class="section-heading">
+      <h2>What's Here</h2>
+    </div>
+    <div class="pricing-grid" style="text-align:left;">
+      <div class="pricing-card" style="text-align:left;">
+        <p class="pricing-card__name">40 ft Walls</p>
+        <p>Top-rope, lead, and auto-belay lines across three wall angles.</p>
+      </div>
+      <div class="pricing-card" style="text-align:left;">
+        <p class="pricing-card__name">Boulder Cave</p>
+        <p>V0 through V10+, reset every two weeks by our in-house setters.</p>
+      </div>
+      <div class="pricing-card" style="text-align:left;">
+        <p class="pricing-card__name">Fitness Area</p>
+        <p>Hangboards, campus board, and a mat area for training days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#1a2023;">
+  <div class="wrapper" style="text-align:center;">
+    <h2>Know Your Grade</h2>
+    <p style="color:var(--muted); max-width:32rem; margin: 0 auto 2rem; opacity:0.8;">
+      Not sure what a V4 feels like on rope? Here's the rough conversion.
+    </p>
+    <div class="grade-chart" style="max-width:34rem; margin:0 auto;">
+      {% for g in grades.list %}
+      <div class="grade-row">
+        <span class="grade-row__label">{{ g.label }}</span>
+        <span class="grade-row__bar"><span class="grade-row__bar-fill" style="width:{{ g.fill }}%; background:{{ g.color }};"></span></span>
+        <span class="grade-row__yds">{{ g.yds }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <a href="/routes/" class="btn-outline" style="margin-top:2rem;">Full Route Guide</a>
+  </div>
+</section>

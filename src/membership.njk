@@ -1,0 +1,41 @@
+---
+layout: layouts/page.njk
+title: Membership
+permalink: /membership/
+---
+<section class="section" style="padding-bottom:1rem;">
+  <div class="wrapper">
+    <div class="section-heading">
+      <h1>Membership</h1>
+      <p>No initiation fee, cancel monthly plans anytime. Annual plans save about 17%.</p>
+    </div>
+
+    <div class="billing-toggle">
+      <span class="billing-toggle__label active" id="label-monthly">Monthly</span>
+      <button type="button" class="billing-toggle__switch" id="billing-switch" role="switch" aria-checked="false" aria-label="Toggle annual billing"></button>
+      <span class="billing-toggle__label" id="label-annual">Annual <span class="save-badge">Save ~17%</span></span>
+    </div>
+
+    <div class="pricing-grid">
+      {% for tier in membership.tiers %}
+      <div class="pricing-card{% if tier.featured %} pricing-card--featured{% endif %}">
+        <p class="pricing-card__name">{{ tier.name }}</p>
+        <p class="pricing-card__price">
+          <span data-price data-monthly="{{ tier.monthly }}" data-annual="{{ tier.annualMonthly }}">{{ tier.monthly | money }}</span><span style="font-size:1rem; color:var(--muted);">/mo</span>
+        </p>
+        <p class="pricing-card__period" data-billing-note>Billed monthly</p>
+        <ul class="pricing-card__features">
+          {% for f in tier.features %}
+          <li>{{ f }}</li>
+          {% endfor %}
+        </ul>
+        <a href="/contact/" class="btn-outline">Get Started</a>
+      </div>
+      {% endfor %}
+    </div>
+
+    <p style="text-align:center; color:var(--muted); margin-top:2.5rem; font-size:0.9rem; opacity:0.8;">
+      Day passes are $22 walk-in, no membership required. Prices shown are for planning — <a href="/contact/">reach out</a> to actually sign up.
+    </p>
+  </div>
+</section>

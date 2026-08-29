@@ -1,0 +1,358 @@
+.site-header {
+  background: $color-surface;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid $color-border;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .site-header__brand {
+    font-family: $font-display;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: $color-text;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.75rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: $color-muted;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+
+    &:hover,
+    &.is-active {
+      color: $color-accent;
+    }
+  }
+}
+
+.site-footer {
+  border-top: 1px solid $color-border;
+  margin-top: 4rem;
+  padding: 2rem 0;
+  color: $color-muted;
+  font-size: 0.9rem;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+// Hero with a topographic contour-line pattern
+.hero {
+  position: relative;
+  padding: 5.5rem 0;
+  text-align: center;
+  overflow: hidden;
+  background-color: $color-bg;
+  background-image:
+    repeating-radial-gradient(circle at 20% 30%, rgba(255, 90, 31, 0.08) 0, rgba(255, 90, 31, 0.08) 1px, transparent 1px, transparent 34px),
+    repeating-radial-gradient(circle at 80% 70%, rgba(63, 184, 175, 0.08) 0, rgba(63, 184, 175, 0.08) 1px, transparent 1px, transparent 40px);
+
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 4.25rem);
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    color: $color-muted;
+    font-size: 1.15rem;
+    max-width: 34rem;
+    margin: 0 auto 2rem;
+  }
+}
+
+.btn {
+  display: inline-block;
+  background: $color-accent;
+  color: #12100e;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.9rem 1.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  clip-path: polygon(0 0, 100% 0, 94% 100%, 6% 100%);
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+}
+
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: $color-text;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.85rem 1.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.9rem;
+  border: 2px solid $color-border;
+}
+
+.btn-outline:hover {
+  border-color: $color-accent;
+  color: $color-accent;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+
+  p {
+    color: $color-muted;
+  }
+}
+
+// Membership pricing toggle
+.billing-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.billing-toggle__switch {
+  position: relative;
+  width: 3.25rem;
+  height: 1.75rem;
+  background: $color-surface;
+  border: 2px solid $color-border;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.billing-toggle__switch::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: $color-accent;
+  transition: transform 0.15s ease;
+}
+
+.billing-toggle__switch[aria-checked="true"]::after {
+  transform: translateX(1.5rem);
+}
+
+.billing-toggle__label {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: $color-muted;
+}
+
+.billing-toggle__label.active {
+  color: $color-text;
+}
+
+.save-badge {
+  background: $color-accent-2;
+  color: #0d1f1d;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  margin-left: 0.4rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.75rem;
+}
+
+.pricing-card {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.pricing-card--featured {
+  border-color: $color-accent;
+  position: relative;
+}
+
+.pricing-card__name {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: $color-accent;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-card__price {
+  font-family: $font-display;
+  font-size: 2.75rem;
+  margin: 0;
+}
+
+.pricing-card__period {
+  color: $color-muted;
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.pricing-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  text-align: left;
+  color: $color-muted;
+  font-size: 0.9rem;
+}
+
+.pricing-card__features li {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid $color-border;
+}
+
+// Route grade chart
+.grade-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.grade-row {
+  display: grid;
+  grid-template-columns: 5rem 1fr 6rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.grade-row__label {
+  font-family: $font-display;
+  color: $color-text;
+}
+
+.grade-row__bar {
+  height: 0.85rem;
+  border-radius: 999px;
+  background: $color-border;
+  overflow: hidden;
+}
+
+.grade-row__bar-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.grade-row__yds {
+  color: $color-muted;
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+// Class schedule
+.day-filter {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.day-filter button {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  color: $color-muted;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.day-filter button.selected {
+  border-color: $color-accent;
+  color: $color-accent;
+}
+
+.class-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.class-row {
+  display: grid;
+  grid-template-columns: 6rem 1fr 8rem;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid $color-border;
+}
+
+.class-row__day {
+  color: $color-accent;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.class-row__level {
+  color: $color-muted;
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+.prose {
+  max-width: 42rem;
+  margin: 0 auto;
+
+  p {
+    color: $color-muted;
+  }
+}
+
+.contact-details {
+  padding: 2rem 0 4rem;
+
+  dt {
+    font-family: $font-display;
+    color: $color-accent;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+
+  dd {
+    margin: 0 0 1rem;
+  }
+}
